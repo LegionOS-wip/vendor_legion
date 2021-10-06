@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ANDROID_VERSION := 11.0
-LEGIONVERSION := v3.13
+ANDROID_VERSION := 12.0
+LEGIONVERSION := v4.0.0
 
 LEGION_BUILD_TYPE ?= UNOFFICIAL
 LEGION_MAINTAINER ?= UNKNOWN

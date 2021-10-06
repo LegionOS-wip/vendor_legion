@@ -99,19 +99,10 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_PACKAGES += \
     Terminal
 
-# GcamGoPrebuilt
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt
 
 # Themes
 PRODUCT_PACKAGES += \
-    ThemePicker \
-    OmniStyle \
-    OmniJaws  \
-    GamingMode
-
-PRODUCT_COPY_FILES += \
-    vendor/legion/prebuilt/common/etc/init/init.performance_level.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.performance_level.rc
+    ThemePicker
 
 # Updater
 ifeq ($(LEGION_BUILD_TYPE), OFFICIAL)
@@ -124,10 +115,6 @@ PRODUCT_PACKAGES += \
     Updater
 endif
 
-# StitchImage
-PRODUCT_PACKAGES += \
-    StitchImage \
-    StitchImageService \
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
@@ -225,9 +212,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/legion/overlay/common
 # Versioning
 -include vendor/legion/config/version.mk
 
-# Include Potato volume panels
-include packages/apps/Plugins/plugins.mk
-
 # Bootanimation
 -include vendor/legion/bootanimation/bootanimation.mk
 
@@ -250,9 +234,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1 \
     persist.sys.sf.disable_blurs=1 \
     ro.sf.blurs_are_expensive=1
-
-# Include Vendor Parts
--include vendor/LegionParts/parts.mk
 
 # Inherit art options
 include vendor/legion/config/art.mk

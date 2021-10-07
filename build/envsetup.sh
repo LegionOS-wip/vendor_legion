@@ -766,6 +766,3 @@ function push_update(){(
     git push https://github.com/LegionOS-Devices/official_devices.git HEAD:11
     rm -rf $devices_dir
 )}
-
-# Allow GCC 4.9
-export TEMPORARY_DISABLE_PATH_RESTRICTIONS=true

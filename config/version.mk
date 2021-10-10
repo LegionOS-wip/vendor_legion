@@ -52,7 +52,7 @@ LEGION_DISPLAY_VERSION := LegionOS-$(LEGIONVERSION)-$(LEGION_BUILD_TYPE)
 LEGION_FINGERPRINT := LegionOS/$(LEGION_MOD_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%H%M)
 
 # LegionOS System Version
-ADDITIONAL_SYSTEM_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.legion.buildtype=$(LEGION_BUILD_TYPE) \
     ro.legion.build.date=$(LEGION_BUILD_DATE) \
     ro.legion.display.version=$(LEGION_DISPLAY_VERSION) \

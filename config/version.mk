@@ -50,3 +50,17 @@ LEGION_MOD_VERSION :=$(ANDROID_VERSION)-$(LEGIONVERSION)
 LEGION_DISPLAY_VERSION := LegionOS-$(LEGIONVERSION)-$(LEGION_BUILD_TYPE)
 
 LEGION_FINGERPRINT := LegionOS/$(LEGION_MOD_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%H%M)
+
+# LegionOS System Version
+ADDITIONAL_SYSTEM_PROPERTIES += \
+    ro.legion.buildtype=$(LEGION_BUILD_TYPE) \
+    ro.legion.build.date=$(LEGION_BUILD_DATE) \
+    ro.legion.display.version=$(LEGION_DISPLAY_VERSION) \
+    ro.legion.android_version=$(ANDROID_VERSION) \
+    ro.legion.releasetype=$(LEGION_BUILD_TYPE) \
+    ro.legionversion=$(LEGIONVERSION) \
+    ro.legion.version=$(LEGION_VERSION) \
+    ro.modversion=$(LEGION_MOD_VERSION) \
+    ro.legion.ziptype=$(LEGION_BUILD_ZIP_TYPE) \
+    ro.maintainer.name=$(LEGION_MAINTAINER) \
+    org.legion.fingerprint=$(LEGION_FINGERPRINT)
